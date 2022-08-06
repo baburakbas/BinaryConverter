@@ -7,12 +7,12 @@ import "fmt"
 // array has 64 digits, so we can calculate 64 digits of binary
 func decimalToBinary(decimalNumber int) {
 	var digits [64]int
-	var digitNo int = 0
+	var digitNo int = 63
 	for decimalNumber != 0 {
 		var integer int = decimalNumber % 2
 		decimalNumber = decimalNumber / 2
 		digits[digitNo] = integer
-		digitNo++
+		digitNo--
 
 	}
 	fmt.Println(digits)
