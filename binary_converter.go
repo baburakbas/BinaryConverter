@@ -15,7 +15,12 @@ func decimalToBinary(decimalNumber int) {
 		digitNo--
 
 	}
-	fmt.Println(digits)
+	// this section limits the range we want to print
+	fmt.Print("Binary equivalent of your number : ")
+	for printRange := 63; printRange != digitNo; printRange-- {
+		fmt.Print(digits[printRange])
+	}
+
 }
 
 func main() {
