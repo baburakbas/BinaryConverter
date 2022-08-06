@@ -4,34 +4,18 @@ package main
 import "fmt"
 
 //func divides decimal number to 2 and add the reminder in to digits array until decimal cannot divided
+// array has 64 digits, so we can calculate 64 digits of binary
 func decimalToBinary(decimalNumber int) {
-	var digits []int
+	var digits [64]int
+	var digitNo int = 0
 	for decimalNumber != 0 {
 		var integer int = decimalNumber % 2
-		digits[0] = integer
 		decimalNumber = decimalNumber / 2
+		digits[digitNo] = integer
+		digitNo++
 
 	}
 	fmt.Println(digits)
-}
-func binaryToDecimal(number string) {
-	// Assuming that number contains 0,1s
-	// Used to store result
-	var result int64 = 0
-	var bit int = 0
-	var n int = len(number) - 1
-	// Execute given number in reverse order
-	for n >= 0 {
-		if number[n] == '1' {
-			// When get binary 1
-			result += (1 << (bit))
-		}
-		n = n - 1
-		// Count number of bits
-		bit++
-	}
-	// Display decimal result
-	fmt.Println("  Decimal :  ", result)
 }
 
 func main() {
