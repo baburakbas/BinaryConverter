@@ -23,6 +23,14 @@ func decimalToBinary(decimalNumber int) {
 
 }
 
+func binaryToDecimal(binaryNumber int) {
+	var deciArray [256]int
+	for binaryNumber != 0 {
+
+	}
+
+}
+
 func main() {
 	var num int
 	fmt.Println("Enter the number you want to convert :")
