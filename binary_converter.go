@@ -23,26 +23,11 @@ func decimalToBinary(decimalNumber int) {
 
 }
 
-func binaryToDecimal(binaryNumber int) {
-	var deciArray [64]int
-	var elementNo int = 0
-	for i := 0; binaryNumber != 0; i++ {
-		var reminde int = binaryNumber % 10
-		for n := 0; n != i; n++ {
-			var elementArray int = reminde * 2
-			deciArray[elementNo] = elementArray
-		}
-
-		binaryNumber = binaryNumber / 10
-		elementNo++
-	}
-	fmt.Print(deciArray)
-}
-
 func main() {
 	var numDeci int
-
-	fmt.Println("Enter the number you want to convert :")
+	fmt.Print("Enter the number you want to convert :")
 	fmt.Scan(&numDeci)
 	decimalToBinary(numDeci)
+
 }
+
