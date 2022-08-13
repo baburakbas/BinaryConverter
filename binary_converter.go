@@ -24,6 +24,7 @@ func decimalToBinary(decimalNumber int) {
 }
 
 func main() {
+	// we take decimal number from user and use it in decimalToBinary function 
 	var numDeci int
 	fmt.Print("Enter the number you want to convert :")
 	fmt.Scan(&numDeci)
