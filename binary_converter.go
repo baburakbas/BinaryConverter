@@ -29,11 +29,7 @@ func main() {
 	fmt.Print("Enter the number you want to convert :")
 	fmt.Scan(&numDeci)
 	decimalToBinary(numDeci)
-	hello()
-
-}
-func hello(){
-	fmt.Println("Merhaba Hasan")
+	
 
 }
 
